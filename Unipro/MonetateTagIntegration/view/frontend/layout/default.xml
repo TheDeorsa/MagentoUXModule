@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+        <!-- main tag now called with a helper (not here)  -->
+        <referenceContainer name="head.additional">
+            <block class="Unipro\MonetateTagIntegration\Block\PageDetails" template="pageDetails.phtml" name="Unipro_MonetateTagIntegration_block_pageDetails" />
+        </referenceContainer>
+
+        <referenceBlock name="before.body.end">
+            <block class="Unipro\MonetateTagIntegration\Block\Head" template="foot.phtml" name="Unipro_MonetateTagIntegration_block_foot"/>
+        </referenceBlock>
+</page>

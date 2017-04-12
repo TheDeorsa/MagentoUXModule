@@ -1,0 +1,56 @@
+<script type="text/javascript">
+
+    dataToMonetate();
+
+</script>
+
+<script>
+
+
+// console.log("currentPageType", currentPageType);
+
+// if('1' == '2') {
+// // if(<?php //echo $pageType ?> == 'Product') {
+
+//     document.getElementById("product_addtocart_form").onclick = function() {
+//         console.log("clicked");
+
+//     // copied code http://magento-quickies.alanstorm.com/post/154439786675/magento-2-extract-currently-selected-product-id
+//         requirejs(['jquery','underscore'], function(jQuery,_){
+//             var selected_options = {};
+//             jQuery('div.swatch-attribute').each(function(k,v){
+//                 var attribute_id    = jQuery(v).attr('attribute-id');
+//                 var option_selected = jQuery(v).attr('option-selected');
+//                 // console.log(attribute_id, option_selected);
+//                 if(!attribute_id || !option_selected){ return;}
+//                 selected_options[attribute_id] = option_selected;
+//             });
+
+//             var product_id_index = jQuery('[data-role=swatch-options]').data('mageSwatchRenderer').options.jsonConfig.index;
+//             var found_ids = [];
+//             jQuery.each(product_id_index, function(product_id,attributes){
+//                 var productIsSelected = function(attributes, selected_options){
+//                     return _.isEqual(attributes, selected_options);
+//                 }
+//                 if(productIsSelected(attributes, selected_options)){
+//                     found_ids.push(product_id);
+//                 }
+//             });
+//     // end of copied code
+
+//             console.log(found_ids);
+
+//             window.monetateQ.push([
+//                 "addProductDetails", found_ids
+//             ]);
+
+//             window.monetateQ.push(currentPageType);
+
+//             window.monetateQ.push(currentPageCat);
+
+//             window.monetateQ.push(["trackData"]);
+
+//         });
+//     };
+// }
+</script>

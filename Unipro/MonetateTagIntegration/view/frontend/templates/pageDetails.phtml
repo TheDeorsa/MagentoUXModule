@@ -1,0 +1,71 @@
+<?php
+
+$cartthings = $block->getCartContents2();
+
+
+// var_dump(get_class_methods($cartthings));
+// var_dump($cartthings);
+
+?>
+
+<script type="text/javascript">
+// Initiate the Monetate array.
+window.monetateQ = window.monetateQ || [];
+window.UNI = [];
+
+<?php
+
+$pageType = $block->getPageType();
+
+?>
+
+    // Get/Set Common Details
+    window.UNI.setPageType = <?php echo json_encode($pageType); ?>;
+
+<?php
+
+$cartHasContents = $block->getCartContents();
+if ($cartHasContents){
+?>
+
+    window.UNI.addCartRows = <?php echo json_encode($cartHasContents) ?>;
+
+<?php }
+
+// Get product ID when on a PDP and set Monetate "addProductDetails"
+$currentProduct = $block->getCurrentProduct();
+if ($currentProduct) { ?>
+
+    window.UNI.addProductDetails = [<?php echo json_encode($currentProduct); ?>];
+
+<?php }
+
+
+// Get both page category name and list of product IDs and set Monetate tag for both.
+$currentCats = $block->getCurrentCategories();
+if ($currentCats) { ?>
+
+    window.UNI.addCategories = <?php echo json_encode($currentCats); ?>;
+
+<?php
+}
+
+$currentLoadedPids = $block->getProductCollection();
+if ($currentLoadedPids) { ?>
+
+    window.UNI.addProducts = <?php echo json_encode($currentLoadedPids); ?>;
+
+<?php }
+
+
+?>
+
+// var dataToMonetate = function () {
+//     for (key in UNI) {
+//         window.monetateQ.push([key, UNI[key]]);
+//     }
+//     return "function return";
+// }
+
+
+</script>
