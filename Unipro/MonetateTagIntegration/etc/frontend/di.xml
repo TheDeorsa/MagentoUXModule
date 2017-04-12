@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<!--     <preference for="Magento\Checkout\CustomerData\DefaultItem" type="Monetate\TrackingTag\Plugin\Checkout\CustomerData\DefaultItem" />
+    <preference for="Magento\Framework\Pricing\Render\Layout" type="Monetate\TrackingTag\Plugin\Pricing\Render\LayoutFix" />
+    <preference for="Magento\ConfigurableProduct\CustomerData\ConfigurableItem" type="Monetate\TrackingTag\Plugin\Checkout\CustomerData\ConfigurableItem" />
+    <preference for="Magento\GroupedProduct\CustomerData\GroupedItem" type="Monetate\TrackingTag\Plugin\Checkout\CustomerData\GroupedItem" />
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="monetateBreadcrumbs" type="Monetate\TrackingTag\Plugin\Breadcrumbs" />
+    </type> -->
+    <type name="Magento\Framework\View\Page\Config\Renderer">
+        <plugin name="uniproMonetateRendererPlugin" type="Unipro\MonetateTagIntegration\Plugin\Renderer" />
+    </type>
+<!--     <type name="Magento\Checkout\CustomerData\Cart">
+        <plugin name="getSectionData" type="Monetate\TrackingTag\Plugin\Cart" />
+    </type> -->
+</config>
