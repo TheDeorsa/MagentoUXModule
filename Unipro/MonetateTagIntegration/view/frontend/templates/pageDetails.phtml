@@ -1,10 +1,12 @@
 <?php
 
-$cartthings = $block->getCartContents2();
+//$cartthings = $block->getCartContents2();
+$user = $block->getUserDetails();
+
+//print_r($user);
+//var_dump(get_class_methods($user));
 
 
-// var_dump(get_class_methods($cartthings));
-// var_dump($cartthings);
 
 ?>
 
@@ -56,6 +58,23 @@ if ($currentLoadedPids) { ?>
     window.UNI.addProducts = <?php echo json_encode($currentLoadedPids); ?>;
 
 <?php }
+
+$filters = $block->getSortFilters();
+if ($filters) { ?>
+    window.UNI.setCustomVariables = <?php echo json_encode($filters); ?>;
+
+<?php
+}
+
+$user = $block->getUserDetails();
+if ($user) { ?>
+window.UNI.user = <?php echo json_encode($user); ?>;
+
+<?php
+}
+
+
+
 
 
 ?>
