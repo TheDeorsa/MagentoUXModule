@@ -32,7 +32,9 @@ class Renderer
         $loopAndPush = '<script>
         var dataToMonetate = function () {
             for (key in UNI) {
-                window.monetateQ.push([key, UNI[key]]);
+                if (key !== "user") {
+                    window.monetateQ.push([key, UNI[key]]);
+                }
             }
             window.monetateQ.push(["trackData"]);
             return "function return";
